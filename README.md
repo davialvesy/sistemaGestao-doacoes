@@ -3,7 +3,7 @@
 ## 📌 Sobre o Projeto
 Este repositório contém o código-fonte do Sistema de Gestão de Doações, desenvolvido como requisito avaliativo para a disciplina de Programação Orientada a Objetos (POO), ministrada pela professora Victoria Oliveira, no Instituto Federal do Ceará (IFCE).
 
-O objetivo principal deste software é criar uma plataforma que conecte **Doadores** a **Instituições** de caridade. O sistema permite o cadastro de usuários, o registro de doações e o acompanhamento das arrecadações, aplicando na prática os conceitos fundamentais de POO (Herança, Polimorfismo, Encapsulamento, etc.).
+O objetivo principal deste software é criar uma plataforma que conecte **Doadores** a **Instituições** de caridade. O sistema permite o cadastro de usuários, o registro de doações e o acompanhamento das arrecadações, aplicando na prática os conceitos fundamentais de POO (Herança, Polimorfismo, Encapsulamento, etc).
 
 ## ⚙️ Funcionalidades
 * **Cadastro de Usuários:** Criação de perfis para Doadores (com CPF) e Instituições (com CNPJ).

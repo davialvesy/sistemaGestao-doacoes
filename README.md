@@ -15,7 +15,7 @@ O objetivo principal deste software é criar uma plataforma que conecte **Doador
 * **Linguagem:** Java (JDK versão [25.0.2])
 * **Paradigma:** Programação Orientada a Objetos (POO)
 * **IDE Recomendada:** VS Code, NetBeans, IntelliJ
-* **Modelagem:** Diagrama UML ([draw.io](draw.io))
+* **Modelagem:** Diagrama UML - draw.io
 
 ## Estrutura e Modelagem
 ![Diagrama UML do Sistema](caminho_para_sua_imagem.png)

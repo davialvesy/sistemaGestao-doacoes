@@ -80,7 +80,7 @@ public abstract class Usuario {
                 temEspecial = true;
             } // Verifica se é um simbolo
         }
-        return temEspecial && temMaiuscula && temMinuscula && temNumero && temEspecial;
+        return temEspecial && temMaiuscula && temMinuscula && temNumero;
     }
 
     public static boolean validacaoEmail(String email) {

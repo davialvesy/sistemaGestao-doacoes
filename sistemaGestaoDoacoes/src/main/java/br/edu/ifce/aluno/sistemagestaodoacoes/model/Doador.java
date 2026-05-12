@@ -1,7 +1,6 @@
+// Created by Ana, and Gabriel
 package br.edu.ifce.aluno.sistemagestaodoacoes.model;
-
 import java.time.LocalDateTime;
-
 public class Doador extends Usuario {
     private String cpf;
     

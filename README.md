@@ -1,3 +1,4 @@
+<h1>Trabalho Acadêmico</h1>
 # 🤝 Sistema de Gestão de Doações
 
 ## 📌 Sobre o Projeto
@@ -21,10 +22,12 @@ O objetivo principal deste software é criar uma plataforma que conecte **Doador
 ![Diagrama UML do Sistema](img/umlpoofinal.png)
 
 ## 🚀 Como Executar o Projeto
-1. Clone este repositório:
-   `git clone https://github.com/davialvesy/sistemaGestao-doacoes.git`
+1. Tenha o JDK instalado em sua máquina.
 2. Abra o projeto na sua IDE de preferência.
-3. Execute a classe principal `main.java`.
+3. Clone este repositório:
+   `git clone https://github.com/davialvesy/sistemaGestao-doacoes.git`
+4. Execute a classe principal `main.java`.
+5. Verifique os testes na pasta tests.
 
 ## 👥 Participantes
 

@@ -18,7 +18,7 @@ O objetivo principal deste software é criar uma plataforma que conecte **Doador
 * **Modelagem:** Diagrama UML - draw.io
 
 ## Estrutura e Modelagem
-![Diagrama UML do Sistema](caminho_para_sua_imagem.png)
+![Diagrama UML do Sistema]('img/UML POO FINAL.png')
 
 ## 🚀 Como Executar o Projeto
 1. Clone este repositório:

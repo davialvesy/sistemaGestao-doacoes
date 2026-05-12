@@ -1,8 +1,8 @@
-package br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts;
+// Created by Ana
 
+package br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts;
 import br.edu.ifce.aluno.sistemagestaodoacoes.model.Doador;
 import br.edu.ifce.aluno.sistemagestaodoacoes.model.Usuario;
-
 public class EmailDoador {
     private int idEmail;
     private String email;
@@ -11,7 +11,7 @@ public class EmailDoador {
     public EmailDoador(int idEmail, String email, Doador doador) {
         this.idEmail = idEmail;
         setEmail(email);
-        this.doador = doador;
+        setDoador(doador);
     }
 
     public int getIdEmail() {

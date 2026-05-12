@@ -1,8 +1,8 @@
-package br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts;
+// Created by Ana
 
+package br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts;
 import br.edu.ifce.aluno.sistemagestaodoacoes.model.Instituicao;
 import br.edu.ifce.aluno.sistemagestaodoacoes.model.Usuario;
-
 public class EmailInstituicao {
 
     private int idEmail;

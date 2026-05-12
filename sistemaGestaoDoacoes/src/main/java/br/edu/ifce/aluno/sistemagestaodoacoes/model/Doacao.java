@@ -1,7 +1,6 @@
+// Created by Ana
 package br.edu.ifce.aluno.sistemagestaodoacoes.model;
-
 import java.time.LocalDateTime;
-
 public class Doacao {
     private int idDoacao;
     private Doador doador;

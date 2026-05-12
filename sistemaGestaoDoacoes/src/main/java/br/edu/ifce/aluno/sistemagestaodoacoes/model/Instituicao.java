@@ -1,7 +1,7 @@
+// Created by Vinicius, and Gabriel
+
 package br.edu.ifce.aluno.sistemagestaodoacoes.model;
-
 import java.time.LocalDateTime;
-
 public class Instituicao extends Usuario {
 
     private double arrecadacao;

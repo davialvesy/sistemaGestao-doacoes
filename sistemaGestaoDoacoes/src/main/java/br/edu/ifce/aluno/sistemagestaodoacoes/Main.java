@@ -1,101 +1,199 @@
-package br.edu.ifce.aluno.sistemagestaodoacoes;
+// Created by Davi, and Vinicius
 
-import java.time.LocalDateTime;
+package br.edu.ifce.aluno.sistemagestaodoacoes;
 
 import br.edu.ifce.aluno.sistemagestaodoacoes.model.Doacao;
 import br.edu.ifce.aluno.sistemagestaodoacoes.model.Doador;
 import br.edu.ifce.aluno.sistemagestaodoacoes.model.Instituicao;
-import br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts.EmailDoador;
-import br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts.EmailInstituicao;
-import br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts.TelefoneDoador;
-import br.edu.ifce.aluno.sistemagestaodoacoes.model.contacts.TelefoneInstituicao;
+
+import java.lang.reflect.Array;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        // Criando doador
-        Doador doador = new Doador(
-                1,
-                "Carlos Silva",
-                "Senha@123456",
-                "carlos@gmail.com",
-                LocalDateTime.now(),
-                "12345678901"
-        );
+        ArrayList<Doador> doadores = new ArrayList<>();
+        ArrayList<Instituicao> instituicoes = new ArrayList<>();
+        ArrayList<Doacao> doacoes = new ArrayList<>();
 
-        // Criando instituição
-        Instituicao instituicao = new Instituicao(
-                1,
-                "Instituto Esperanca",
-                "Instituto@123",
-                "contato@esperanca.com",
-                LocalDateTime.now(),
-                0,
-                "12345678000199"
-        );
+        int opcao;
 
-        // Criando email do doador
-        EmailDoador emailDoador = new EmailDoador(
-                1,
-                "carlos.contato@gmail.com",
-                doador
-        );
+        do { // Tela interativa simples
+            System.out.println("\n===== SISTEMA DE DOAÇÕES =====");
+            System.out.println("1 - Cadastrar doador");
+            System.out.println("2 - Cadastrar instituição");
+            System.out.println("3 - Realizar doação");
+            System.out.println("4 - Listar doadores");
+            System.out.println("5 - Listar instituições");
+            System.out.println("6 - Listar doações");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha: ");
 
-        // Criando telefone do doador
-        TelefoneDoador telefoneDoador = new TelefoneDoador(
-                1,
-                "88999999999",
-                doador
-        );
+            opcao = Integer.parseInt(scanner.nextLine());
+            try {
+                switch (opcao) {
+                    case 1:
+                        System.out.println("\n===Cadastrando Doador===");
+                        System.out.print("Nome: ");
+                        String nomeDoador = scanner.nextLine();
 
-        // Criando email da instituição
-        EmailInstituicao emailInstituicao = new EmailInstituicao(
-                1,
-                "ajuda@esperanca.com",
-                instituicao
-        );
+                        System.out.print("Senha: ");
+                        String senhaDoador = scanner.nextLine();
 
-        // Criando telefone da instituição
-        TelefoneInstituicao telefoneInstituicao = new TelefoneInstituicao(
-                1,
-                "8833334444",
-                instituicao
-        );
+                        System.out.print("Email: ");
+                        String emailDoador = scanner.nextLine();
 
-        // Criando doação
-        Doacao doacao = new Doacao(
-                1,
-                doador,
-                instituicao,
-                250.00
-        );
+                        System.out.print("CPF: ");
+                        String cpf = scanner.nextLine();
 
-        // Exibindo informações
-        System.out.println("===== Doador =====");
-        System.out.println("Nome: " + doador.getNome());
-        System.out.println("CPF: " + doador.getCpf());
-        System.out.println("Email: " + emailDoador.getEmail());
-        System.out.println("Telefone: " + telefoneDoador.getNumTelefone());
+                        Doador doador = new Doador(
+                                doadores.size() + 1,
+                                nomeDoador,
+                                senhaDoador,
+                                emailDoador,
+                                LocalDateTime.now(),
+                                cpf
+                        );
 
-        System.out.println("\n===== Instituição =====");
-        System.out.println("Nome: " + instituicao.getNome());
-        System.out.println("CNPJ: " + instituicao.getCnpj());
-        System.out.println("Email: " + emailInstituicao.getEmail());
-        System.out.println("Telefone: " + telefoneInstituicao.getNumTelefone());
+                        doadores.add(doador);
 
-        System.out.println("\n===== Doação =====");
-        System.out.println("ID Doação: " + doacao.getIdDoacao());
-        System.out.println("Valor doado: R$ " + doacao.getQuantiaDoada());
-        System.out.println("Data: " + doacao.getDataDoacao());
+                        System.out.println("Doador cadastrado com sucesso!");
 
-        System.out.println("\n===== Arrecadação =====");
-        System.out.println("Total arrecadado pela instituição: R$ "
-                + instituicao.getArrecadacao());
+                        break;
 
-        // Testando autenticação
-        System.out.println("\n===== Autenticação =====");
-        System.out.println(doador.autenticar("Senha@123456")
-        );
+                    case 2:
+                        System.out.println("\n=== Cadastro de Instituição ===");
+
+                        System.out.print("Nome: ");
+                        String nomeInst = scanner.nextLine();
+
+                        System.out.print("Senha: ");
+                        String senhaInst = scanner.nextLine();
+
+                        System.out.print("Email: ");
+                        String emailInst = scanner.nextLine();
+
+                        System.out.print("CNPJ: ");
+                        String cnpj = scanner.nextLine();
+
+                        Instituicao instituicao = new Instituicao(
+                                instituicoes.size() + 1,
+                                nomeInst,
+                                senhaInst,
+                                emailInst,
+                                LocalDateTime.now(),
+                                0,
+                                cnpj
+                        );
+
+                        instituicoes.add(instituicao);
+
+                        System.out.println("\nInstituição cadastrada com sucesso!");
+
+                        break;
+
+                    case 3:
+                        if (doadores.isEmpty() || instituicoes.isEmpty()) {
+                            System.out.println("Necessário possuir doadores e instituições cadastradas.");
+                            break;
+                        }
+
+                        System.out.println("\n=== DOADORES ===");
+
+                        for (int i = 0; i < doadores.size(); i++) {
+                            System.out.println(i + " - " + doadores.get(i).getNome());
+                        }
+
+                        System.out.print("Escolha o doador: ");
+                        int indiceDoador = Integer.parseInt(scanner.nextLine());
+
+                        System.out.println("\n=== INSTITUIÇÕES ===");
+
+                        for (int i = 0; i < instituicoes.size(); i++) {
+                            System.out.println(i + " - " + instituicoes.get(i).getNome());
+                        }
+
+                        System.out.print("Escolha a instituição: ");
+                        int indiceInstituicao = Integer.parseInt(scanner.nextLine());
+
+                        System.out.print("Valor da doação: ");
+                        double valor = Double.parseDouble(scanner.nextLine());
+
+                        Doacao doacao = new Doacao(
+                                doacoes.size() + 1,
+                                doadores.get(indiceDoador),
+                                instituicoes.get(indiceInstituicao),
+                                valor
+                        );
+
+                        doacoes.add(doacao);
+
+                        System.out.println("Doação realizada com sucesso!");
+
+                        break;
+
+                    case 4:
+                        System.out.println("\n=== DOADORES ===");
+
+                        if(doadores.isEmpty()){System.out.println("Nenhum doador cadastrado.");}
+
+                        for (Doador d : doadores) {
+                            System.out.println(
+                                    "ID: " + d.getCpf() +
+                                            " | Nome: " + d.getNome()
+                            );
+                        }
+
+                        break;
+
+                    case 5:
+                        System.out.println("\n=== INSTITUIÇÕES ===");
+
+                        if(instituicoes.isEmpty()) {System.out.println("Não há nenhuma instituicão cadastrada");}
+                        for (Instituicao i : instituicoes) {
+                            System.out.println(
+                                    "Nome: " + i.getNome() +
+                                            " | Arrecadação: R$ " + i.getArrecadacao()
+                            );
+                        }
+
+                        break;
+
+                    case 6:
+                        System.out.println("\n=== DOAÇÕES ===");
+
+                        if(doacoes.isEmpty()){System.out.println("Nenhuma doação realizada.");}
+
+                        for (Doacao d : doacoes) {
+
+                            System.out.println(
+                                    "Doador: " + d.getDoador().getNome() +
+                                            " | Instituição: " + d.getInstituicao().getNome() +
+                                            " | Valor: R$ " + d.getQuantiaDoada()
+                            );
+                        }
+
+                        break;
+
+                    case 0:
+                        System.out.println("Sistema encerrado.");
+
+                        break;
+
+                    default:
+                        System.out.println("Opção inválida.");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("Erro: " + e.getMessage());
+            } catch (Exception e) {
+
+                System.out.println("Entrada inválida.");
+            }
+        } while(opcao!=0);
+
+        scanner.close();
     }
 }

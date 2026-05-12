@@ -1,7 +1,7 @@
 # =========================
 # Maven
 # =========================
-target/
+sistemaGestaoDoacoes/target/
 
 # =========================
 # IntelliJ IDEA
